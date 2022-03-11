@@ -1,0 +1,96 @@
+#include "LAB01.h"
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+bool Separate::isEven(int a)
+{
+    if (a % 2 == 0)
+        return true;
+    return false;
+}
+
+template<typename T>ś
+auto Separate::swapArr(T &a, T &b) -> void
+{
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
+auto Separate::printArray(std::vector<int> vec) -> void
+{
+    for (auto el: vec)
+    {
+        std::cout << el << " ";
+    }
+    std::cout << "\n";
+}
+
+void Separate::SwapForBubble(int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void Separate::BubbleSort(std::vector<int> &array)
+{
+    for (size_t i = 0; i < array.size(); i++)
+    {
+        for (size_t j = 0; j < array.size() - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+                SwapForBubble(&array[j], &array[j + 1]);
+        }
+    }
+}
+
+auto Separate::separateOddEven(std::vector<int> arr) -> std::vector<int>
+{
+    auto isEven = [](int a) { return a % 2 == 0; };
+    BubbleSort(arr);
+    bool czyDalejSzukac = true;
+    int last = 0;
+
+    for (int i = 0; czyDalejSzukac; i++)
+    {
+        if (isEven(arr[i]))
+        {
+            for (int j = arr.size() - 1; j > i; j--)
+            {
+                if (!isEven(arr[j]))
+                {
+                    swapArr(arr[i], arr[j]);
+                    break;
+                }
+                if (i + 1 == j)
+                {
+                    czyDalejSzukac = false;
+                    last = i;
+                }
+            }
+        }
+    }
+
+    for (int i = 0; i < last; i++)
+    {
+        for (int j = 0; j < last - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swapArr(arr[j], arr[j + 1]);
+            }
+        }
+        for (size_t j = last; j < arr.size() - 1; j++)
+        {
+            if (arr[j] < arr[j + 1])
+            {
+                swapArr(arr[j], arr[j + 1]);
+            }
+        }
+    }
+
+    printArray(arr);
+    return arr;
+}
