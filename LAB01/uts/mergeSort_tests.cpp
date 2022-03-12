@@ -35,8 +35,7 @@ TEST_P(mergeSortTestsParameterizedTestFixture, OddYearsAreNotLeapYears)
     std::string output = std::get<1>(GetParam());
     int startPos{0};
     auto size = input.size() - 1;
-
-    EXPECT_EQ(output,sut.quickSort(input,startPos,size));
+    EXPECT_EQ(output,sut.quickSort(input,0,size));
 }
 
 INSTANTIATE_TEST_SUITE_P(
