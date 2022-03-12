@@ -1,7 +1,15 @@
 #include "LAB01.h"
 #include <iostream>
 #include <vector>
-#include <algorithm>
+
+auto Separate::printArray(std::vector<int> vec) -> void
+{
+    for (auto el: vec)
+    {
+        std::cout << el << " ";
+    }
+    std::cout << "\n";
+}
 
 bool Separate::isEven(int a)
 {
@@ -16,15 +24,6 @@ auto Separate::swapArr(T &a, T &b) -> void
     T temp = a;
     a = b;
     b = temp;
-}
-
-auto Separate::printArray(std::vector<int> vec) -> void
-{
-    for (auto el: vec)
-    {
-        std::cout << el << " ";
-    }
-    std::cout << "\n";
 }
 
 void Separate::SwapForBubble(int* a, int* b)
