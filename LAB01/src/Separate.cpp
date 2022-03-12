@@ -3,8 +3,6 @@
 
 namespace Task2
 {
-
-
 auto Separate::printArray(std::vector<int> vec) -> void
 {
     for (auto el : vec)
