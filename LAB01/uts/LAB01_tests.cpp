@@ -6,6 +6,7 @@
 class LabTests : public ::testing::Test
 {
 protected:
+
     LabTests() { };
 
     ~LabTests() override { };
@@ -43,3 +44,10 @@ TEST_F(LabTests, GivenInputShouldCorrectSeparation)
     std::vector<int> output {1, 3, 9, 6, 4, 2};
     EXPECT_EQ(sut.separateOddEven(input), output);
 }
+
+TEST_F(LabTests, checkIsEven)
+{
+    Separate sut;
+    EXPECT_TRUE(sut.isEven(2));
+}
+

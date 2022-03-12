@@ -16,12 +16,21 @@
 //                std::cout << "Even: " << arr[i] << " ";
 //        }
 
+
 // for (int i = 0; i <= arr.size(); i++)
 // {
 //     std::sort(arr.begin(),arr.end(),std::greater<int>()); //todo funckja czy to jest parzysta liczba
 //     if (arr[i] % 2 == 1)
 //         std::cout << "Odd: " << arr[i] << " ";
 // }
+
+// for (int i = 0; i <= arr.size(); i++)
+// {
+//     std::sort(arr.begin(),arr.end(),std::greater<int>()); //todo funckja czy to jest parzysta liczba
+//     if (arr[i] % 2 == 1)
+//         std::cout << "Odd: " << arr[i] << " ";
+// }
+
 //    }
 
 //    auto separatOddFromEven(int arr[], int n) -> void
@@ -50,16 +59,15 @@ struct Separate
     template<typename T>
     auto swapArr(T &a, T &b) -> void;
 
-    auto sortVector(std::vector<int> &vec) -> void;
-    void SwapForBubble (int *a, int *b);
-    void BubbleSort (std::vector<int> &array);
+    void SwapForBubble(int* a, int* b);
+
+    void BubbleSort(std::vector<int> &array);
+
     auto printArray(std::vector<int> vec) -> void;
+
     auto separateOddEven(std::vector<int> arr) -> std::vector<int>;
 
     bool isEven(int a);
 
-    //secound version
-    bool Order(int a, int b);
-
-    auto separateOddFromEven() -> void;
+    std::vector<int> &sortAcendinglyDescending(std::vector<int> &arr, int last);
 };
