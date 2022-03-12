@@ -51,6 +51,6 @@ struct Separate
 
     bool isEven(int a);
 
-    std::vector<int> &sortAcendinglyDescending(std::vector<int> &arr, int last);
+    std::vector<int> & sortAcendinglyDescending(std::vector<int> &arr, int last);
 
 };
