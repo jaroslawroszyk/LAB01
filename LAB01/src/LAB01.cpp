@@ -10,6 +10,14 @@ bool Separate::isEven(int a)
     return false;
 }
 
+template<typename T>
+auto Separate::swapArr(T &a, T &b) -> void
+{
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
 auto Separate::printArray(std::vector<int> vec) -> void
 {
     for (auto el: vec)
@@ -17,14 +25,6 @@ auto Separate::printArray(std::vector<int> vec) -> void
         std::cout << el << " ";
     }
     std::cout << "\n";
-}
-
-template<typename T>
-auto Separate::swapArr(T &a, T &b) -> void
-{
-    T temp = a;
-    a = b;
-    b = temp;
 }
 
 void Separate::SwapForBubble(int* a, int* b)
@@ -94,7 +94,6 @@ auto Separate::separateOddEven(std::vector<int> arr) -> std::vector<int>
             }
         }
     }
-
     arr = sortAcendinglyDescending(arr, last);
 
     printArray(arr);

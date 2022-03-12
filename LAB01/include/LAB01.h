@@ -1,5 +1,8 @@
 #pragma once
+<<<<<<< HEAD
 
+=======
+>>>>>>> 24ef13c5990ecd69885f1d14bd2950174166e1f0
 #include <string>
 #include <iostream>
 //    auto separatOddFromEven(std::vector<int> arr) -> void
@@ -17,6 +20,7 @@
 //        }
 
 
+<<<<<<< HEAD
 // for (int i = 0; i <= arr.size(); i++)
 // {
 //     std::sort(arr.begin(),arr.end(),std::greater<int>()); //todo funckja czy to jest parzysta liczba
@@ -24,6 +28,8 @@
 //         std::cout << "Odd: " << arr[i] << " ";
 // }
 
+=======
+>>>>>>> 24ef13c5990ecd69885f1d14bd2950174166e1f0
 // for (int i = 0; i <= arr.size(); i++)
 // {
 //     std::sort(arr.begin(),arr.end(),std::greater<int>()); //todo funckja czy to jest parzysta liczba
@@ -31,6 +37,16 @@
 //         std::cout << "Odd: " << arr[i] << " ";
 // }
 
+<<<<<<< HEAD
+=======
+    // for (int i = 0; i <= arr.size(); i++)
+    // {
+    //     std::sort(arr.begin(),arr.end(),std::greater<int>()); //todo funckja czy to jest parzysta liczba
+    //     if (arr[i] % 2 == 1)
+    //         std::cout << "Odd: " << arr[i] << " ";
+    // }
+
+>>>>>>> 24ef13c5990ecd69885f1d14bd2950174166e1f0
 //    }
 
 //    auto separatOddFromEven(int arr[], int n) -> void
@@ -70,4 +86,5 @@ struct Separate
     bool isEven(int a);
 
     std::vector<int> &sortAcendinglyDescending(std::vector<int> &arr, int last);
+
 };

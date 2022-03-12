@@ -45,7 +45,7 @@ TEST_F(LabTests, GivenInputShouldCorrectSeparation)
     EXPECT_EQ(sut.separateOddEven(input), output);
 }
 
-TEST_F(LabTests, checkIsEven)
+TEST_F(LabTests,checkIsEven)
 {
     Separate sut;
     EXPECT_TRUE(sut.isEven(2));
