@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 #include "LAB01.h"
 #include <vector>
-#include <utility>
 
 class LabTests : public ::testing::Test
 {
@@ -12,22 +11,23 @@ protected:
     ~LabTests() override { };
 };
 
-/*
- * testuj:
-    - swap function dla intów i stringów
-    - separateOddEven
-    - zad1
-    - zad3 - jak?
- */
-/*
- * auto Separate::swapArr(T &a, T &b) -> void
+TEST_F(LabTests, isNumberEven)
 {
-    T temp = a;
-    a = b;
-    b = temp;
+    Separate sut;
+    EXPECT_TRUE(sut.isEven(0));
+    EXPECT_FALSE(sut.isEven(1));
+    EXPECT_TRUE(sut.isEven(100));
 }
- *
- */
+
+TEST_F(LabTests,sortingWithBubbleSort)
+{
+    std::vector<int> in{7,5,4,1,3,2,6}; // 1-7
+    std::vector<int> out{1,2,3,4,5,6,7};
+
+    Separate sut;
+    sut.BubbleSort(in);
+    EXPECT_EQ(in,out);
+}
 
 TEST_F(LabTests, separateOddEvenShouldReturnCorrectSeparation)
 {
