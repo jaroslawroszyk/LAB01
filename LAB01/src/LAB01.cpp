@@ -1,6 +1,5 @@
 #include "LAB01.h"
 #include <iostream>
-//#include <vector>
 
 auto Separate::printArray(std::vector<int> vec) -> void
 {
@@ -108,6 +107,5 @@ auto Separate::separateOddEven(std::vector<int> arr) -> std::vector<int>
 
     arr = sortAcendinglyDescending(arr, last);
 
-    printArray(arr);
     return arr;
 }
