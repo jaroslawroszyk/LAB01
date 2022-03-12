@@ -1,6 +1,10 @@
 #include "LAB01.h"
 #include <iostream>
 
+namespace Task2
+{
+
+
 auto Separate::printArray(std::vector<int> vec) -> void
 {
     for (auto el : vec)
@@ -109,3 +113,4 @@ auto Separate::separateOddEven(std::vector<int> arr) -> std::vector<int>
 
     return arr;
 }
+} //namespace Task2

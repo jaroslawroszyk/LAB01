@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "LAB01.h"
 #include <vector>
+using namespace Task2;
 
 class LabTests : public ::testing::Test
 {
