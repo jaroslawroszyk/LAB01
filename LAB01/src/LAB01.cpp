@@ -10,7 +10,8 @@ bool Separate::isEven(int a)
     return false;
 }
 
-template<typename T>ś
+
+template<typename T>
 auto Separate::swapArr(T &a, T &b) -> void
 {
     T temp = a;
@@ -72,6 +73,7 @@ auto Separate::separateOddEven(std::vector<int> arr) -> std::vector<int>
             }
         }
     }
+
 
     for (int i = 0; i < last; i++)
     {
