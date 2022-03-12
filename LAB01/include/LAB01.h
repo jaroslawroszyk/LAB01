@@ -15,8 +15,6 @@
 //                std::cout << "Even: " << arr[i] << " ";
 //        }
 
-
-
 //    auto separatOddFromEven(int arr[], int n) -> void
 //    {
 //        int i = 1;
