@@ -1,9 +1,9 @@
 #include "mergeSort.h"
-#include <vector>
+#include <string>
 
 namespace Task1
 {
-    auto Merge::quickSort(std::string &str, int start, int end) -> void
+    auto Merge::quickSort(std::string &str, int start, int end) -> std::string
     {
         int startPos = start;
         int endPos = end;
@@ -26,5 +26,6 @@ namespace Task1
         if (start < endPos) quickSort(str, start, endPos);
 
         if (startPos < end) quickSort(str, startPos, end);
+        return str;
     }
 } //namespace Task1
