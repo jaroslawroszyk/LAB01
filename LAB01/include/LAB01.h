@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 #include <iostream>
 //    auto separatOddFromEven(std::vector<int> arr) -> void
@@ -17,21 +16,6 @@
 //        }
 
 
-// for (int i = 0; i <= arr.size(); i++)
-// {
-//     std::sort(arr.begin(),arr.end(),std::greater<int>()); //todo funckja czy to jest parzysta liczba
-//     if (arr[i] % 2 == 1)
-//         std::cout << "Odd: " << arr[i] << " ";
-// }
-
-// for (int i = 0; i <= arr.size(); i++)
-// {
-//     std::sort(arr.begin(),arr.end(),std::greater<int>()); //todo funckja czy to jest parzysta liczba
-//     if (arr[i] % 2 == 1)
-//         std::cout << "Odd: " << arr[i] << " ";
-// }
-
-//    }
 
 //    auto separatOddFromEven(int arr[], int n) -> void
 //    {
@@ -70,4 +54,5 @@ struct Separate
     bool isEven(int a);
 
     std::vector<int> &sortAcendinglyDescending(std::vector<int> &arr, int last);
+
 };
