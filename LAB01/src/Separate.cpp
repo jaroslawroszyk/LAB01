@@ -1,4 +1,4 @@
-#include "LAB01.h"
+#include "Separate.h"
 #include <iostream>
 
 namespace Task2

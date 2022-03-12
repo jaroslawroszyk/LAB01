@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "LAB01.h"
+#include "Separate.h"
 #include <vector>
 using namespace Task2;
 
