@@ -1,6 +1,5 @@
 #pragma once
-#include <string>
-#include <iostream>
+
 #include <vector>
 
 struct Separate
@@ -8,16 +7,19 @@ struct Separate
     template<typename T>
     auto swapArr(T &a, T &b) -> void;
 
-    void SwapForBubble(int* a, int* b);
+    auto SwapForBubble(int* a, int* b) -> void;
 
-    void BubbleSort(std::vector<int> &array);
+    auto BubbleSort(std::vector<int> &array) -> void;
 
     auto printArray(std::vector<int> vec) -> void;
 
     auto separateOddEven(std::vector<int> arr) -> std::vector<int>;
 
-    bool isEven(int a);
+    auto isEven(int a) -> bool;
 
-    std::vector<int> & sortAcendinglyDescending(std::vector<int> &arr, int last);
+    auto sortAscending(std::vector<int> &arr, int last) -> std::vector<int> &;
 
+    auto sortDescending(std::vector<int> &arr, int last) -> std::vector<int> &;
+
+    auto sortAcendinglyDescending(std::vector<int> &arr, int last) -> std::vector<int> &;
 };

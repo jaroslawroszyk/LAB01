@@ -1,17 +1,17 @@
 #include "LAB01.h"
 #include <iostream>
-#include <vector>
+//#include <vector>
 
 auto Separate::printArray(std::vector<int> vec) -> void
 {
-    for (auto el: vec)
+    for (auto el : vec)
     {
         std::cout << el << " ";
     }
     std::cout << "\n";
 }
 
-bool Separate::isEven(int a)
+auto Separate::isEven(int a) -> bool
 {
     if (a % 2 == 0)
         return true;
@@ -26,18 +26,18 @@ auto Separate::swapArr(T &a, T &b) -> void
     b = temp;
 }
 
-void Separate::SwapForBubble(int* a, int* b)
+auto Separate::SwapForBubble(int* a, int* b) -> void
 {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-void Separate::BubbleSort(std::vector<int> &array)
+auto Separate::BubbleSort(std::vector<int> &array) -> void
 {
-    for (size_t i = 0; i < array.size(); i++)
+    for (size_t i = 0 ; i < array.size() ; i++)
     {
-        for (size_t j = 0; j < array.size() - 1; j++)
+        for (size_t j = 0 ; j < array.size() - 1 ; j++)
         {
             if (array[j] > array[j + 1])
                 SwapForBubble(&array[j], &array[j + 1]);
@@ -45,24 +45,36 @@ void Separate::BubbleSort(std::vector<int> &array)
     }
 }
 
-std::vector<int> &Separate::sortAcendinglyDescending(std::vector<int> &arr, int last)
+auto Separate::sortAscending(std::vector<int> &arr, int last) -> std::vector<int> &
 {
-    for (int i = 0; i < last; i++)
+    for (int j = 0 ; j < last - 1 ; j++)
     {
-        for (int j = 0; j < last - 1; j++)
+        if (arr[j] > arr[j + 1])
         {
-            if (arr[j] > arr[j + 1])
-            {
-                swapArr(arr[j], arr[j + 1]);
-            }
+            swapArr(arr[j], arr[j + 1]);
         }
-        for (size_t j = last; j < arr.size() - 1; j++)
+    }
+    return arr;
+}
+
+auto Separate::sortDescending(std::vector<int> &arr, int last) -> std::vector<int> &
+{
+    for (size_t j = last ; j < arr.size() - 1 ; j++)
+    {
+        if (arr[j] < arr[j + 1])
         {
-            if (arr[j] < arr[j + 1])
-            {
-                swapArr(arr[j], arr[j + 1]);
-            }
+            swapArr(arr[j], arr[j + 1]);
         }
+    }
+    return arr;
+}
+
+auto Separate::sortAcendinglyDescending(std::vector<int> &arr, int last) -> std::vector<int> &
+{
+    for (int i = 0 ; i < last ; i++)
+    {
+        arr = sortAscending(arr, last);
+        arr = sortDescending(arr, last);
     }
     return arr;
 }
@@ -74,11 +86,11 @@ auto Separate::separateOddEven(std::vector<int> arr) -> std::vector<int>
     bool czyDalejSzukac = true;
     int last = 0;
 
-    for (int i = 0; czyDalejSzukac; i++)
+    for (int i = 0 ; czyDalejSzukac ; i++)
     {
         if (isEven(arr[i]))
         {
-            for (int j = arr.size() - 1; j > i; j--)
+            for (int j = arr.size() - 1 ; j > i ; j--)
             {
                 if (!isEven(arr[j]))
                 {
