@@ -14,7 +14,4 @@ protected:
 
 TEST_F(GuessNumberTests, isEven)
 {
-    Guess sut;
-    EXPECT_TRUE(sut.isEven(2));
-    EXPECT_FALSE(sut.isEven(3));
 }
