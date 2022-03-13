@@ -1,5 +1,6 @@
 #include "mergeSort.h"
 #include <string>
+#include <stdexcept>
 
 namespace Task1
 {
