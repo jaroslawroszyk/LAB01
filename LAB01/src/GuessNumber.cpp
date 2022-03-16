@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-
+int fo;
 namespace Task3
 {
 

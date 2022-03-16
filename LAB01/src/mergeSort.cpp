@@ -1,7 +1,7 @@
 #include "mergeSort.h"
 #include <string>
 #include <stdexcept>
-
+int fo;
 namespace Task1
 {
 
