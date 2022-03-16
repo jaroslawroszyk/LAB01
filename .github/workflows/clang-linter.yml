@@ -1,11 +1,9 @@
 name: cpp-linter
 
-on:
-  push:
-    paths-ignore: "docs/**"
-  pull_request:
-    paths-ignore: "docs/**"
-
+on: [push,pull_request]
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
 jobs:
   cpp-linter:
     runs-on: ubuntu-latest
