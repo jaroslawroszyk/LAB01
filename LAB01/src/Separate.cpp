@@ -4,7 +4,7 @@
 namespace Task2
 {
     int foo{0};
-
+    auto wtf{0};
     auto Separate::printArray(std::vector<int> vec) -> void
     {
         for (auto el : vec)
