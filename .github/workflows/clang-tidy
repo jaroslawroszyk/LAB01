@@ -1,0 +1,15 @@
+# This is a basic workflow to help you get started with Actions
+- name: clang-tidy check
+  uses: muxee/clang-tidy-action@0.0.1-rc1
+
+workflow "on pull request, lint with clang-tidy " {
+  on = "pull_request"
+  resolves = ["clang-tidy"]
+}
+
+action "clang-tidy" {
+  uses = "muxee/clang-tidy-action@master"
+  secrets = ["GITHUB_TOKEN"]
+
+  args = "-checks=*"
+}
