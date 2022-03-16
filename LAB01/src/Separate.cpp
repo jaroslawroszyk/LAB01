@@ -1,6 +1,7 @@
 #include "Separate.h"
 #include <iostream>
 int f{2};
+int f2{2};
 namespace Task2
 {
     int foo{0};
